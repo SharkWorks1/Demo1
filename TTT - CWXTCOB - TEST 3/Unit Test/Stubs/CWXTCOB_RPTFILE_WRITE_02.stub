@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stub:stub xmlns:checkconditions="http://www.compuware.com/model/xml/checkconditions" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" xmlns:stub="http://www.compuware.com/model/xml/stub" alias="" encoding="1047" id="Unit%20Test/Stubs/CWXTCOB_RPTFILE_WRITE_02.stub" stubtype="QSAM WRITE" target="RPTFILE" token="60000">
+  <stub:description>Created: Aug 17, 2018 12:30:32 PM</stub:description>
+  <stub:stubdata id="0" name="RPTFILE">
+    <stub:interface>../Interfaces/CWXTCOB_RPTFILE_BLANK_LINE.interface#Unit%20Test/Interfaces/CWXTCOB_RPTFILE_BLANK_LINE.interface</stub:interface>
+    <stub:output listructure="../Structures/CWXTCOB_RPTFILE_BLANK-LINE.listructure#Unit%20Test/Structures/CWXTCOB_RPTFILE_BLANK-LINE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWXTCOB_RPTFILE_BLANK-LINE.listructure#BLANK_LINE" id="arg0.BLANK_LINE">
+        <properties:properties>
+          <properties:property name="value" type="string">4040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+      <stub:data baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_BLANK-LINE.listructure#BLANK_LINE.BLANK_LINE" id="output0.arg0.BLANK_LINE.BLANK_LINE" offset="0"/>
+    </stub:output>
+    <stub:checkconditions>
+      <checkconditions:simpleCheckcondition refData="#output0.arg0.BLANK_LINE.BLANK_LINE">
+        <checkconditions:expression>'' eq result.arg0.BLANK_LINE.BLANK_LINE</checkconditions:expression>
+        <checkconditions:expectation assert="=" type="string"></checkconditions:expectation>
+      </checkconditions:simpleCheckcondition>
+    </stub:checkconditions>
+  </stub:stubdata>
+  <stub:stubdata id="1" name="RPTFILE">
+    <stub:interface>../Interfaces/CWXTCOB_RPTFILE_EMP_TOTAL_DTL.interface#Unit%20Test/Interfaces/CWXTCOB_RPTFILE_EMP_TOTAL_DTL.interface</stub:interface>
+    <stub:output listructure="../Structures/CWXTCOB_RPTFILE_EMP-TOTAL-DTL.listructure#Unit%20Test/Structures/CWXTCOB_RPTFILE_EMP-TOTAL-DTL.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWXTCOB_RPTFILE_EMP-TOTAL-DTL.listructure#EMP_TOTAL_DTL" id="arg0.EMP_TOTAL_DTL">
+        <properties:properties>
+          <properties:property name="value" type="string">40404040E3D6E3C1D340404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040F04BF0F0</properties:property>
+        </properties:properties>
+      </stub:data>
+      <stub:data baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_EMP-TOTAL-DTL.listructure#EMP_TOTAL_DTL.FILLER0" id="output1.arg0.EMP_TOTAL_DTL.FILLER0" offset="0"/>
+      <stub:data baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_EMP-TOTAL-DTL.listructure#EMP_TOTAL_DTL.FILLER1" id="output1.arg0.EMP_TOTAL_DTL.FILLER1" offset="4"/>
+      <stub:data baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_EMP-TOTAL-DTL.listructure#EMP_TOTAL_DTL.FILLER2" id="output1.arg0.EMP_TOTAL_DTL.FILLER2" offset="9"/>
+      <stub:data baseType="listructure:numberType ../Structures/CWXTCOB_RPTFILE_EMP-TOTAL-DTL.listructure#EMP_TOTAL_DTL.EMP_GRAND_TOTAL" id="output1.arg0.EMP_TOTAL_DTL.EMP_GRAND_TOTAL" offset="70"/>
+    </stub:output>
+    <stub:checkconditions>
+      <checkconditions:simpleCheckcondition refData="#output1.arg0.EMP_TOTAL_DTL.FILLER0">
+        <checkconditions:expression>'' eq result.arg0.EMP_TOTAL_DTL.FILLER0</checkconditions:expression>
+        <checkconditions:expectation assert="=" type="string"></checkconditions:expectation>
+      </checkconditions:simpleCheckcondition>
+      <checkconditions:simpleCheckcondition refData="#output1.arg0.EMP_TOTAL_DTL.FILLER1">
+        <checkconditions:expression>'TOTAL' eq result.arg0.EMP_TOTAL_DTL.FILLER1</checkconditions:expression>
+        <checkconditions:expectation assert="=" type="string">TOTAL</checkconditions:expectation>
+      </checkconditions:simpleCheckcondition>
+      <checkconditions:simpleCheckcondition refData="#output1.arg0.EMP_TOTAL_DTL.FILLER2">
+        <checkconditions:expression>'' eq result.arg0.EMP_TOTAL_DTL.FILLER2</checkconditions:expression>
+        <checkconditions:expectation assert="=" type="string"></checkconditions:expectation>
+      </checkconditions:simpleCheckcondition>
+      <checkconditions:simpleCheckcondition refData="#output1.arg0.EMP_TOTAL_DTL.EMP_GRAND_TOTAL">
+        <checkconditions:expression>BigDecimalCreator.make('0.00').compareTo(result.arg0.EMP_TOTAL_DTL.EMP_GRAND_TOTAL) eq 0</checkconditions:expression>
+        <checkconditions:expectation assert="=" type="number">0.00</checkconditions:expectation>
+      </checkconditions:simpleCheckcondition>
+    </stub:checkconditions>
+  </stub:stubdata>
+</stub:stub>
